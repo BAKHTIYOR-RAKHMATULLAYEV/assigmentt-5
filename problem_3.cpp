@@ -1,32 +1,27 @@
 #include <iostream>
 
 using namespace std;
-
 int main () {
-    int j,sum=0, sum1=0;
 
-    cin>>j;
-    for(int i=1;i<=j; i++){
+    int n, f1=0, f2=1, f3, sum =1;
+    cin>>n;
 
-        if(i%2!=0){
-            sum+=i;
+    cout<<f1<<" "<<f2<<" ";
 
-        }
-    }
+    for(int i=2; i<n; i++){
 
-   
-    for(int i=1; i<=j; i++){
+        f3 = f1 + f2;
+        cout<<f3<<" ";
 
-        if(i%2==0){
-            sum1+=i;
+        sum +=f3;
+        f1=f2;
 
-    }
-        
+        f2 = f3;
 
     }
-    cout<<sum<<" ";
+    cout<<"\n";
 
-    cout<<sum1;
+    cout<<sum;
     return 0;
 
 }
